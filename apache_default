@@ -22,6 +22,24 @@
                 Allow from all
         </Directory>
 
+        Alias /phpmyadmin /var/www/phpmyadmin
+        <Directory /phpmyadmin>
+                Options Indexes FollowSymLinks MultiViews
+                # To make wordpress .htaccess work
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        Alias /cumulusclips /var/www/cumulusclips
+        <Directory /cumulusclips>
+                Options Indexes FollowSymLinks MultiViews
+                # To make wordpress .htaccess work
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
         ErrorLog ${APACHE_LOG_DIR}/error.log
 
         # Possible values include: debug, info, notice, warn, error, crit,
